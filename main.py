@@ -32,11 +32,11 @@ def prog3():
     pics=["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"]
 
     for pic in pics:
-        with Image.open(pic) as pic:
-            pic.load()
-            new_pic= pic.filter(ImageFilter.CONTOUR)
-            new_pic.show()
-            new_pic.save("new_" + pic)
+        with Image.open(pic) as im:
+            im.load()
+            new_im= im.filter(ImageFilter.CONTOUR)
+            new_im.show()
+            new_im.save("new_" + pic)
 def prog4():
 
     mark="watermark.png"
